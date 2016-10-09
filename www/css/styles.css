@@ -1,0 +1,49 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+#content {
+	background: url(../images/back.png) no-repeat;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+#desktop {
+	width: 100%;
+	height: 88%;
+}
+#taskpanel {
+	position: fixed;
+	width: 100%;
+	min-height: 110px;
+	height: 12%;
+	bottom: 0;
+	background: url(../images/taskbar.png) no-repeat;
+}
+#start {
+	background: url(../images/button_A.png) no-repeat;
+	position: fixed;
+	bottom: 0;
+	margin: 0.25%;
+	width: 56px;
+	height: 5.25%;
+	min-height: 35px;
+	background-size: contain;
+	left: 5px;
+}
+
+#start:hover {
+	background: url(../images/button_B.png) no-repeat;
+	background-size: contain;	
+}
+
+#start_menu {
+	background: url(../images/start-menu.png) no-repeat;
+	width: 645px;
+    height: 70%;
+    min-height: 250px;
+    background-size: contain;
+    position: fixed;
+    bottom: -10px;
+}
