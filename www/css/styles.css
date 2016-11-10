@@ -2,7 +2,6 @@ body{
 	margin: 0px;
 	padding: 0px;
 }
-
 #content {
 	background: url(../images/back.png) no-repeat;
 	width: 100%;
@@ -11,13 +10,13 @@ body{
 }
 #desktop {
 	width: 100%;
-	height: 88%;
+	height: 95%;
 }
 #taskpanel {
 	position: fixed;
 	width: 100%;
-	min-height: 110px;
-	height: 12%;
+	min-height: 20px;	
+	height: 5%;
 	bottom: 0;
 	background: url(../images/taskbar.png) no-repeat;
 }
@@ -33,6 +32,31 @@ body{
 	left: 5px;
 }
 
+#bugs_list {
+	text-align: center;
+	background: gray;
+	position: fixed;
+	top: 30%;
+	border: solid 1px blue;
+	left: 25%;
+	width: 768px;
+	height: 400px;
+	z-index: 0;
+	overflow: scroll;
+}
+
+#new_report {
+	background: gray;
+	text-align: center;
+	position: fixed;
+	top: 25%;
+	border: solid 1px red;
+	left: 25%;
+	width: 768px;
+	height: 400px;
+	z-index: 0;
+}
+
 #start:hover {
 	background: url(../images/button_B.png) no-repeat;
 	background-size: contain;	
@@ -40,10 +64,69 @@ body{
 
 #start_menu {
 	background: url(../images/start-menu.png) no-repeat;
-	width: 645px;
-    height: 70%;
+	width: 500px;
+    height: 55%;
     min-height: 250px;
     background-size: contain;
     position: fixed;
+	padding: 25px;
     bottom: -10px;
+}
+
+#user_field{
+	margin: 0px 160px;
+	position: relative;
+	background: url(../images/id.png) 100% 100% no-repeat;
+	width: 100px;
+	height: 23px;
+	background-size: contain;
+}
+
+#user_id {
+	color: cyan;
+	padding: 5px 5px 5px 25px;
+    font-size: 14px;
+}
+#under_userpic {
+    padding-top: 7px;
+    padding-left: 4px;
+	margin: 0px 25px;
+	position: relative;
+	background: url(../images/under_userpic.png) no-repeat;
+    width: 180px;
+    height: 180px;	
+	z-index: 0;
+}
+
+#vlad {
+	background: url(../images/vlad.png) no-repeat;
+    width: 163px;
+    height: 163px;
+	position: relative;
+	z-index: -1;
+	top: 5%;
+    left: 5%;
+}
+#circle {
+	background: url(../images/circle.png) no-repeat;
+	width: 183px;
+    height: 183px;
+	top: -4%;
+    left: -4%;
+}
+#glass {
+	background: url(../images/glass.png) no-repeat;
+	width: 170px;
+    height: 170px;
+}
+
+.newreport {
+	background: rgba(128, 128, 128, 0.27);
+	width: 130px;
+    height: 31px;
+	position: relative;
+	border: solid 1px cyan;
+	color: white;
+	cursor: pointer;
+    border-style: dotted;
 }

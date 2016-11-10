@@ -1,0 +1,86 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	background: url(../images/login.png) 100% 100% no-repeat;
+	background-size: cover;
+}
+
+td {
+	color: white;
+	border: none;
+}
+
+#logo {
+	position: relative;
+	background: url(../images/login_line.png) 100% 100% no-repeat;
+	background-size: contain;
+	margin: 0px auto;
+	height: 50%;
+	width: 50%;
+	min-height: 10%;
+	min-width: 10%;
+}
+
+#navigator {
+	position: relative;
+	width: 50%;
+	padding: 5px;
+	margin: 0px auto;
+
+	font-size: 20px;
+	font-family: monospace;
+	color: white;
+}
+
+a.glassButton {
+  position: relative;
+  color: #009fff;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a.glassButton:active {
+  top: 1px;
+}
+
+a.glassButton:hover {
+  top: 1px;
+}
+
+/* Регистрация */
+#regcont {
+	color: white;
+	position: relative;
+	width: 620px;
+	margin: 0px auto;
+}
+
+#reglab {
+	position: relative;
+	width: 200px;
+}
+
+#regform {
+	position: relative;
+	margin: 0px auto;
+	padding: 25px; 
+}
+
+#regform td, table, tr {
+	padding: 5px;	
+	border: none;
+}
+
+#regform label {
+	float: left;
+}
+
+.bt_register {
+	cursor: pointer;
+	border: 2px solid cyan;
+    font-weight: bold;
+    height: 24px;
+	color: white;
+	background: transparent 0 0;
+}
