@@ -2,24 +2,22 @@
 <div id="regcont">
 	<div id="regform">
 		<form action="" method="post">	
-			<table border="1" cellpadding="1" cellspacing="1" style="margin: 0px auto;">
+			<table border="2" cellpadding="1" cellspacing="1" style="margin:auto;">
 				<tbody>
 					<tr>
-						<td>Логин:</td>
-						<td></td>								
+						<td>Логин: &nbsp;</td>								
 						<td><input class="field" type="text" name="username" id="username" value="" size="23"/></td>
 					</tr>
 					<tr>
-						<td>Пароль:</td>
-						<td></td>								
+						<td>Пароль:&nbsp;</td>							
 						<td><input class="field" type="password" name="password" id="password" value="" size="23" /></td>
 					</tr>
 					<tr>
 						<td><input type="submit" name="submit" value="Enter" class="bt_register"/></td>
-						<td></td>
+						<td>&nbsp;</td>
 					</tr>
 					<tr>
-					<td>
+					<td colspan="2" align="center">
 					<?php
 					if($_SESSION['msg']['login-err']) {
 						echo '<div class="err">'.$_SESSION['msg']['login-err'].'</div>';

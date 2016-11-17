@@ -5,9 +5,9 @@ if(!defined('INCLUDE_CHECK')) die('У вас нет прав на выполне
 
 /* Конфигурация базы данных */
 
-$db_host		= 'localhost';
-$db_user		= 'root';
-$db_pass		= 'HfcnfKexybr2013';
+$db_host		= 'akseleon.com';
+$db_user		= 'site';
+$db_pass		= '05168080';
 $db_database	= 'bugreporter'; 
 
 /* Конец секции */
