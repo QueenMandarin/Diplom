@@ -10,6 +10,10 @@ td {
 	border: none;
 }
 
+.field {
+	width:160px;
+}
+
 #logo {
 	position: relative;
 	background: url(../images/login_line.png) 100% 100% no-repeat;

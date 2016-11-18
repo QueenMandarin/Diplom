@@ -5,12 +5,12 @@
 			<table border="2" cellpadding="1" cellspacing="1" style="margin:auto;">
 				<tbody>
 					<tr>
-						<td>Логин: &nbsp;</td>								
-						<td><input class="field" type="text" name="username" id="username" value="" size="23"/></td>
+						<td>Логин:</td>								
+						<td><input class="field" type="text" name="username" id="username" value=""/></td>
 					</tr>
 					<tr>
-						<td>Пароль:&nbsp;</td>							
-						<td><input class="field" type="password" name="password" id="password" value="" size="23" /></td>
+						<td>Пароль:</td>							
+						<td><input class="field" type="password" name="password" id="password" value=""/></td>
 					</tr>
 					<tr>
 						<td><input type="submit" name="submit" value="Enter" class="bt_register"/></td>

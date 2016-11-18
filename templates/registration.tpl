@@ -5,6 +5,10 @@
 			<table border="1" cellpadding="1" cellspacing="1" style="margin: 0px auto;">
 				<tbody>
 					<tr>
+						<td>Имя:</td>								
+						<td><input class="field" type="text" name="nickname" id="nickname" value=""/></td>
+					</tr>
+					<tr>
 						<td>Логин:</td>							
 						<td><input class="field" type="text" name="username" id="username" value="" size="23"/></td>
 					</tr>
