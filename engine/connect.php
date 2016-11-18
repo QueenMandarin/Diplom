@@ -7,7 +7,7 @@ if(!defined('INCLUDE_CHECK')) die('У вас нет прав на выполне
 
 $db_host		= 'localhost';
 $db_user		= 'root';
-$db_pass		= 'HfcnfKexybr2013';
+$db_pass		= 'root';
 $db_database	= 'bugreporter'; 
 
 /* Конец секции */
