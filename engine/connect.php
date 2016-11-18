@@ -6,8 +6,8 @@ if(!defined('INCLUDE_CHECK')) die('У вас нет прав на выполне
 /* Конфигурация базы данных */
 
 $db_host		= 'akseleon.com';
-$db_user		= 'site';
-$db_pass		= '05168080';
+$db_user		= 'root';
+$db_pass		= 'root';
 $db_database	= 'bugreporter'; 
 
 /* Конец секции */
