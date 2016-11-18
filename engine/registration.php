@@ -9,8 +9,16 @@ if($_POST['submit']=='Зарегистрироваться') {
 		$err[]='Логин должен содержать от 3 до 32 символов!';
 	}
 	
+	if(strlen($_POST['nickname'])<4 || strlen($_POST['nickname'])>16) {
+		$err[]='Ник-нейм должен содержать от 3 до 16 символов!';
+	}	
+	
 	if(preg_match('/[^a-z0-9\-\_\.]+/i',$_POST['username'])) {
 		$err[]='Ваш логин содержит недопустимые символы!';
+	}
+	
+	if(preg_match('/[^a-z0-9\-\_\.]+/i',$_POST['nickname'])) {
+	$err[]='Ваш ник-нейм содержит недопустимые символы!';
 	}
 	
 	if(!checkEmail($_POST['email'])) {
@@ -34,14 +42,15 @@ if($_POST['submit']=='Зарегистрироваться') {
 		$_POST['username'] = mysql_real_escape_string($_POST['username']);
 		$_POST['password'] = mysql_real_escape_string($_POST['password']);
 		$_POST['repassword'] = mysql_real_escape_string($_POST['repassword']);
+		$_POST['nickname'] = mysql_real_escape_string($_POST['repassword']);		
 		$_POST['email'] = mysql_real_escape_string($_POST['email']);
 		// Получаем введеные данные
-		mysql_query("INSERT INTO users(login, password,e_mail,access_level,regIP,date_time)
+		mysql_query("INSERT INTO users(login, name, password, e_mail, regIP, date_time)
 						VALUES(
 							'".$_POST['username']."',
+							'".$_POST['nickname']."',
 							'".md5($_POST['password'])."',
 							'".$_POST['email']."',
-							'0',
 							'".$_SERVER['REMOTE_ADDR']."',
 							NOW()
 						)");

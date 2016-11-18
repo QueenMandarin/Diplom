@@ -21,7 +21,7 @@
 			$_POST['username'] = mysql_real_escape_string($_POST['username']);
 			$_POST['password'] = mysql_real_escape_string($_POST['password']);	
 
-			$row = mysql_fetch_assoc(mysql_query("SELECT id FROM users WHERE login='{$_POST['username']}' AND password='".md5($_POST['password'])."'"));
+			$row = mysql_fetch_assoc(mysql_query("SELECT id, name FROM users WHERE login='{$_POST['username']}' AND password='".md5($_POST['password'])."'"));
 
 			if($row['id'])
 			{
