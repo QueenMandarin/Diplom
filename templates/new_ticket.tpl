@@ -1,6 +1,6 @@
 ﻿<head>
-<script  language="javascript" src="/css/js/jquery.js"></script>
-<script language="JavaScript" src="/css/js/symbol.js"></script>
+<script language="javascript" src="/css/js/jquery.js"></script>
+<script language="javaScript" src="/css/js/symbol.js"></script>
 	
 </head>	
 
@@ -37,8 +37,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td>Описание:</td>
-					<td></td>								
+					<td>Описание:</td>						
 					<td><textarea name="description" id="description" rows="6" cols="23"></textarea><br />
 					<span id="charlimitinfo">У Вас осталось 250 символов.</span>
 					</td>

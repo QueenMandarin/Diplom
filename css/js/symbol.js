@@ -4,12 +4,12 @@ function limitChars(textid, limit, infodiv)
 	var textlength = text.length;
 	
 	if(textlength > limit) {
-		$('#' + infodiv).html('Вам нельзя написать более чем '+limit+' символов!');
+		$('#' + infodiv).html('Р’Р°Рј РЅРµР»СЊР·СЏ РЅР°РїРёСЃР°С‚СЊ Р±РѕР»РµРµ С‡РµРј '+limit+' СЃРёРјРІРѕР»РѕРІ!');
 		$('#'+textid).val(text.substr(0,limit));
 		return false;
 	}
 	else {
-		$('#' + infodiv).html('У Вас осталось '+ (limit - textlength) +' символов.');
+		$('#' + infodiv).html('РЈ Р’Р°СЃ РѕСЃС‚Р°Р»РѕСЃСЊ '+ (limit - textlength) +' СЃРёРјРІРѕР»РѕРІ.');
 		return true;
 	}
 }
