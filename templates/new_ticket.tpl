@@ -1,4 +1,10 @@
-﻿<div id="new_report">
+﻿<head>
+<script  language="javascript" src="/css/js/jquery.js"></script>
+<script language="JavaScript" src="/css/js/symbol.js"></script>
+	
+</head>	
+
+<div id="new_report">
 	<form action="" method="post">	
 		<table cellpadding="1" cellspacing="1" style="margin: 0px auto; color: white;">
 			<tbody>
@@ -31,8 +37,11 @@
 					</td>
 				</tr>
 				<tr>
-					<td>Описание:</td>							
-					<td><textarea name="description" id="description"></textarea></td>
+					<td>Описание:</td>
+					<td></td>								
+					<td><textarea name="description" id="description" rows="6" cols="23"></textarea><br />
+					<span id="charlimitinfo">У Вас осталось 250 символов.</span>
+					</td>
 				</tr>
 				<tr>
 					<td><input type="submit" name="submit_report" value="Отправить" class="newreport"/></td>
