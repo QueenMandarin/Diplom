@@ -1,7 +1,8 @@
 ﻿<?php
 if(!defined('INCLUDE_CHECK')) die('У вас нет прав запускать файл на выполнение');
 
-if($_POST['submit']=='Зарегистрироваться') {
+	if($_POST['submit_registration']=='Зарегистрироваться') {
+	
 	// Проверяем, что предоставила форма Зарегистрироваться
 	$err = array();
 	
@@ -40,9 +41,9 @@ if($_POST['submit']=='Зарегистрироваться') {
 	if(!count($err)) {
 		// Если нет ошибок
 		$_POST['username'] = mysql_real_escape_string($_POST['username']);
+		$_POST['nickname'] = mysql_real_escape_string($_POST['nickname']);	
 		$_POST['password'] = mysql_real_escape_string($_POST['password']);
-		$_POST['repassword'] = mysql_real_escape_string($_POST['repassword']);
-		$_POST['nickname'] = mysql_real_escape_string($_POST['repassword']);		
+		$_POST['repassword'] = mysql_real_escape_string($_POST['repassword']);	
 		$_POST['email'] = mysql_real_escape_string($_POST['email']);
 		// Получаем введеные данные
 		mysql_query("INSERT INTO users(login, name, password, e_mail, regIP, date_time)

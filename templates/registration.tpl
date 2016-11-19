@@ -25,7 +25,7 @@
 						<td><input class="field" type="text" name="email" id="email" size="23"/></td>
 					</tr>
 					<tr>
-						<td colspan="2" align="center"><input type="submit" name="submit" value="Зарегистрироваться" class="bt_register"/></td>
+						<td colspan="2" align="center"><input type="submit" name="submit_registration" value="Зарегистрироваться" class="bt_register"/></td>
 					</tr>
 					<tr>
 					<td colspan="2" align="center">

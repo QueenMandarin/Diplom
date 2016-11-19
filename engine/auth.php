@@ -11,7 +11,7 @@
 		exit;
 	}
 	
-	if($_POST['submit']=='Enter') {
+	if($_POST['submit_enter']=='Войти') {
 	$err = array(); // Запоминаем ошибки
 	
 		if(!$_POST['username'] || !$_POST['password'])
@@ -26,6 +26,7 @@
 			if($row['id'])
 			{
 				$_SESSION['id'] = $row['id'];
+				$_SESSION['name'] = $row['name'];
 				header("Location: index.php");
 			}
 			else

@@ -24,7 +24,7 @@
 				</div>
 			</div>
 				<div id="user_field">
-					<div id="user_id"><? echo $_SESSION['id'] ?></div>
+					<div id="user_id"><? echo $_SESSION['name'] ?></div>
 				</div>
 			<p>
 			<button class="newreport" onclick="openFrame('new_report'); return false">Оставить заявку</button>

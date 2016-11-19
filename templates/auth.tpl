@@ -13,7 +13,7 @@
 						<td><input class="field" type="password" name="password" id="password" value=""/></td>
 					</tr>
 					<tr>
-						<td><input type="submit" name="submit" value="Enter" class="bt_register"/></td>
+						<td><input type="submit" name="submit_enter" value="Войти" class="bt_register"/></td>
 						<td>&nbsp;</td>
 					</tr>
 					<tr>
