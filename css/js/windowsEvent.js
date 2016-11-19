@@ -20,18 +20,25 @@ function openFrame(id) {
 	}	   
 }
 
+function closeFrame(id) {
+    var object = document.getElementById(id);
+    document.getElementById(id).style.display='none';
+}
+
 function changeFocus(id) {
     var object = document.getElementById(id).style.zIndex;
 	
-    if (id=='new_report') {
+    if (id=='new_report_form') {
 		document.getElementById(id).style.zIndex=1;
-		document.getElementById('bugs_list').style.zIndex=0;
+		document.getElementById('bugs_list_form').style.zIndex=0;
 	}
-	else if (id=='bugs_list') {
+	else if (id=='bugs_list_form') {
 		document.getElementById(id).style.zIndex=1;
-		document.getElementById('new_report').style.zIndex=0;
+		document.getElementById('new_report_form').style.zIndex=0;
 	}
 }
+
+
 /*
 	(._. ) 
    {	  }

@@ -12,6 +12,7 @@ body{
 	width: 100%;
 	height: 95%;
 }
+/* панель задач  */
 #taskpanel {
 	position: fixed;
 	width: 100%;
@@ -23,38 +24,13 @@ body{
 #start {
 	background: url(../images/button_A.png) no-repeat;
 	position: fixed;
-	bottom: 0;
+	bottom: 0px;
 	margin: 0.25%;
 	width: 56px;
 	height: 5.25%;
 	min-height: 35px;
 	background-size: contain;
 	left: 5px;
-}
-
-#bugs_list {
-	text-align: center;
-	background: gray;
-	position: fixed;
-	top: 30%;
-	border: solid 1px blue;
-	left: 25%;
-	width: 768px;
-	height: 400px;
-	z-index: 0;
-	overflow: scroll;
-}
-
-#new_report {
-	background: gray;
-	text-align: center;
-	position: fixed;
-	top: 25%;
-	border: solid 1px red;
-	left: 25%;
-	width: 768px;
-	height: 400px;
-	z-index: 0;
 }
 
 #start:hover {
@@ -72,7 +48,7 @@ body{
 	padding: 25px;
     bottom: -10px;
 }
-
+/* userbar */
 #user_field{
 	margin: 0px 160px;
 	position: relative;
@@ -119,6 +95,47 @@ body{
 	width: 170px;
     height: 170px;
 }
+/* new ticket*/
+#new_report_form {
+	background: black;
+	text-align: center;
+	position: fixed;
+	top: 25%;
+	border: solid 1px rgba(0, 170, 251, 0.59);
+	left: 25%;
+	width: 768px;
+	height: 400px;
+	z-index: 0;
+}
+
+#new_report {
+	top: 23px;
+	position: relative;
+	width: 768px;
+    height: 377px;
+}
+
+/* bugs_list */
+#bugs_list_form {
+	text-align: center;
+	background: black;
+	position: fixed;
+	top: 30%;
+	border: solid 1px rgba(0, 170, 251, 0.59);
+	left: 25%;
+	width: 768px;
+	height: 400px;
+	z-index: 0;
+}
+
+#bugs_list {
+	top: 23px;
+	position: relative;
+	width: 768px;
+    height: 377px;
+	overflow: scroll;
+}
+/* end */
 
 .newreport {
 	background: rgba(128, 128, 128, 0.27);
@@ -129,4 +146,27 @@ body{
 	color: white;
 	cursor: pointer;
     border-style: dotted;
+}
+
+
+/* Панель управления формой */
+.controlBar {
+	color: white;
+	position: fixed;
+    width: 768px;
+    height: 23px;
+    background-color: rgba(0, 170, 251, 0.59);
+}
+
+.close {
+	background: url(../images/close.png) no-repeat;
+    position: relative;
+    float: right;
+    width: 23px;
+    height: 23px;
+	cursor: pointer;
+}
+
+.close:hover {
+	background: url(../images/close-focused.png) no-repeat;
 }
