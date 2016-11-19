@@ -7,7 +7,7 @@ if(!defined('INCLUDE_CHECK')) die('У вас нет прав на выполне
 
 $db_host		= 'localhost';
 $db_user		= 'root';
-$db_pass		= 'root'; // its fucking shit!!!11
+$db_pass		= 'HfcnfKexybr2013';
 $db_database	= 'bugreporter'; 
 
 /* Конец секции */
