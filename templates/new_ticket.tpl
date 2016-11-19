@@ -4,12 +4,10 @@
 			<tbody>
 				<tr>
 					<td>Тема:</td>
-					<td></td>
 					<td><input class="field" type="text" name="theme" id="theme" value="" size="23"/></td>
 				</tr>
 				<tr>
 					<td>Приоритет:</td>
-					<td></td>
 					<td><select name="priority" id="priority">
 						<option disabled>Выберите приоритет</option>
 						<option value="High">Высокий</option>
@@ -19,7 +17,6 @@
 				</tr>
 				<tr>
 					<td>Категория:</td>
-					<td></td>
 					<td><select name="category" id="category">
 						<option disabled>Выберите категорию</option>
 						<option value="0">Системная ошибка</option>
@@ -34,24 +31,22 @@
 					</td>
 				</tr>
 				<tr>
-					<td>Описание:</td>
-					<td></td>								
+					<td>Описание:</td>							
 					<td><textarea name="description" id="description"></textarea></td>
 				</tr>
 				<tr>
-					<td></td>
 					<td><input type="submit" name="submit_report" value="Отправить" class="newreport"/></td>
 				</tr>
 					<tr>
 						<td>
 							<?php
-							if($_SESSION['msg']['reg-err']) {
-								echo '<div class="err">'.$_SESSION['msg']['reg-err'].'</div>';
-								unset($_SESSION['msg']['reg-err']);
+							if($_SESSION['ticket_msg']['ticket-err']) {
+								echo '<div class="err">'.$_SESSION['ticket_msg']['ticket-err'].'</div>';
+								unset($_SESSION['ticket_msg']['ticket-err']);
 							}
-							if($_SESSION['msg']['reg-success']) {
-								echo '<div class="success">'.$_SESSION['msg']['reg-success'].'</div>';
-								unset($_SESSION['msg']['reg-success']);
+							if($_SESSION['ticket_msg']['ticket-success']) {
+								echo '<div class="success">'.$_SESSION['ticket_msg']['ticket-success'].'</div>';
+								unset($_SESSION['ticket_msg']['ticket-success']);
 							}
 							?>
 						</td>

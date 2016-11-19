@@ -1,5 +1,4 @@
 <?php
-
 if(!defined('INCLUDE_CHECK')) die('У вас не прав запускать файл на выполнение');
 
 	function checkEmail($str) {
@@ -41,35 +40,33 @@ if(!defined('INCLUDE_CHECK')) die('У вас не прав запускать ф
 			mysql_query("INSERT INTO bugs(name, description, category, priority, sender, date)
 				VALUES('".$_POST['theme']."','".$_POST['description']."',
 					".$_POST['category'].",'".$_POST['priority']."',
-					'".$_SESSION['name']."', NOW() )");
+					'".$_SESSION['name']."', '".date("d.m.Y H:i:s")."')");
 					
-			if(mysql_affected_rows($link)==1)			
-				$_SESSION['msg']['reg-success']='Поздравляем! Заявка отправлена!';
+			if(mysql_affected_rows() > 0)			
+				$_SESSION['ticket_msg']['ticket-success']='Поздравляем! Заявка отправлена!';
 			else
-				$err[]='Unregistered error!';				
+				$err[]='Database error!';
 		}
 		if(count($err)) {
-			$_SESSION['msg']['reg-err'] = implode('<br />',$err);
+			$_SESSION['ticket_msg']['ticket-err'] = implode('<br />',$err);
 		}
 		header("Location: ".$_SERVER["REQUEST_URI"]);
 		exit;
 	}
 
-	function select_bugs() {
-		if($_SESSION['id'])
-		{	
-			$sql = mysql_query("SELECT * FROM bugs");
+	function select_bugs_for_user() {
+		if($_SESSION['id']) {	
+			$sql = mysql_query("SELECT * FROM bugs WHERE sender = '".$_SESSION['name']."';");
 
-			while($row = mysql_fetch_assoc($sql))
-			{
+			while($row = mysql_fetch_assoc($sql)) {
 				echo
 				"<tr>
-					<td>" .$row["id"]. "</td>
-					<td>"  .$row["name"]. "</td>
-					<td>"  .$row["description"]. "</td>
-					<td>"  .$row["priority"]. "</td>
-					<td>"  .$row["status"]. "</td>
-					<td>"  .$row["sender"]. "</td>
+					<td>".$row["id"]. "</td>
+					<td>".$row["name"]. "</td>
+					<td>".$row["description"]. "</td>
+					<td>".$row["priority"]. "</td>
+					<td>".$row["status"]. "</td>
+					<td>".$row["date"]. "</td>
 				</tr>";
 			}
 		}

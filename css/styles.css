@@ -2,12 +2,14 @@ body{
 	margin: 0px;
 	padding: 0px;
 }
+
 #content {
 	background: url(../images/back.png) no-repeat;
 	width: 100%;
 	height: 100%;
 	background-size: cover;
 }
+
 #desktop {
 	width: 100%;
 	height: 95%;
@@ -113,6 +115,7 @@ body{
 	position: relative;
 	width: 768px;
     height: 377px;
+    overflow: overlay;
 }
 
 /* bugs_list */
@@ -120,20 +123,31 @@ body{
 	text-align: center;
 	background: black;
 	position: fixed;
-	top: 30%;
+	top: 20%;
 	border: solid 1px rgba(0, 170, 251, 0.59);
-	left: 25%;
-	width: 768px;
+	left: 20%;
+	width: 1000px;
 	height: 400px;
 	z-index: 0;
 }
 
 #bugs_list {
-	top: 23px;
 	position: relative;
-	width: 768px;
+	width: 1000px;
     height: 377px;
-	overflow: scroll;
+	overflow: overlay;
+}
+
+#bugs_list table {
+	border-collapse: collapse;
+	font-size: 14px;
+}
+
+#bugs_list td {
+	padding: 10px; /* Поля вокруг содержимого таблицы */
+	border: 1px solid gray; /* Параметры рамки */
+	border-style: outset;
+	text-align: center;
 }
 /* end */
 
@@ -152,8 +166,7 @@ body{
 /* Панель управления формой */
 .controlBar {
 	color: white;
-	position: fixed;
-    width: 768px;
+	position: relative;
     height: 23px;
     background-color: rgba(0, 170, 251, 0.59);
 }

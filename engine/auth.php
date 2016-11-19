@@ -12,7 +12,7 @@
 	}
 	
 	if($_POST['submit_enter']=='Войти') {
-	$err = array(); // Запоминаем ошибки
+		$err = array(); // Запоминаем ошибки
 	
 		if(!$_POST['username'] || !$_POST['password'])
 			$err[] = 'Все поля должны быть заполнены!';
@@ -23,20 +23,18 @@
 
 			$row = mysql_fetch_assoc(mysql_query("SELECT id, name FROM users WHERE login='{$_POST['username']}' AND password='".md5($_POST['password'])."'"));
 
-			if($row['id'])
-			{
+			if($row['id']) {
 				$_SESSION['id'] = $row['id'];
 				$_SESSION['name'] = $row['name'];
 				header("Location: index.php");
 			}
 			else
-			{
 				$err[]='Неверный логин или пароль!';
-				header("Location: index.php?page=auth");
-			}
 		}
-	if($err)
-		$_SESSION['msg']['login-err'] = implode('<br />',$err);
-	exit;
+		if($err) {
+			$_SESSION['msg']['login-err'] = implode('<br />',$err);
+			header("Location: index.php?page=auth");
+			exit;
+		}
 	}
 ?>

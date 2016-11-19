@@ -1,15 +1,13 @@
 <div id="bugs_list">
-	<table style="color: white;">
+	<table style="color: white; width: 983px;">
 		<tr>
-			<td>ID</td>
-			<td>Тема</td>
-			<td>Описание</td>
-			<td>Приоритет</td>
-			<td>Статус</td>
-			<td>Отправитель</td>
+			<td style="width: 50px; color: cyan;">№:</td>
+			<td style="color: cyan;">Тема:</td>
+			<td style="color: cyan;">Описание:</td>
+			<td style="color: cyan;">Приоритет:</td>
+			<td style="color: cyan;">Статус:</td>
+			<td style="color: cyan;">Дата:</td>
 		</tr>
-		<?php
-			select_bugs();
-		?>
+		<?php select_bugs_for_user(); ?>
 	</table>
 </div>
