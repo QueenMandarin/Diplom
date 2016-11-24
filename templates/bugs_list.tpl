@@ -1,5 +1,5 @@
 <div id="bugs_list">
-	<table style="color: white; width: 983px;">
+	<table style="color: white;">
 		<tr>
 			<td style="width: 50px; color: cyan;">№:</td>
 			<td style="color: cyan;">Тема:</td>
