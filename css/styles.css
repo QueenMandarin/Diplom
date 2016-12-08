@@ -22,6 +22,7 @@ body{
 	height: 5%;
 	bottom: 0;
 	background: url(../images/taskbar.png) no-repeat;
+	z-index: 999;
 }
 #start {
 	background: url(../images/button_A.png) no-repeat;
@@ -41,100 +42,99 @@ body{
 }
 
 #start_menu {
-	background: url(../images/start-menu.png) no-repeat;
-	width: 500px;
+	background: rgba(195, 195, 195, 0.12);
+	border-radius: 5px;
+	width: 400px;
     height: 55%;
     min-height: 250px;
-    background-size: contain;
     position: fixed;
 	padding: 25px;
-    bottom: -10px;
+    bottom: 0px;
+	background: rgba(33, 33, 33, 0.47);
+	border-style: ridge;
+    border-color: #6f6969;
 }
 /* userbar */
+#avatar {
+    position: relative;
+    float: right;
+    top: -50px;
+}
 #user_field{
-	margin: 0px 160px;
-	position: relative;
-	background: url(../images/id.png) 100% 100% no-repeat;
-	width: 100px;
-	height: 23px;
-	background-size: contain;
+	margin: 0px 25px;
+    position: relative;
+    width: 103px;
+    height: 20px;
+    border-style: dotted;
+    border: dotted 1px;
+    border-color: #b9b9b9;
+    background: rgba(33, 33, 33, 0.47);
 }
 
 #user_id {
-	color: cyan;
-	padding: 5px 5px 5px 25px;
+	color: white;
+	padding: 3px 4px 4px 25px;
     font-size: 14px;
 }
-#under_userpic {
-    padding-top: 7px;
-    padding-left: 4px;
+
+#av_border {
 	margin: 0px 25px;
-	position: relative;
-	background: url(../images/under_userpic.png) no-repeat;
-    width: 180px;
-    height: 180px;	
-	z-index: 0;
+	width: 100px;
+    height: 100px;
+    border-style: ridge;
+    border-color: gray;
 }
 
-#vlad {
-	background: url(../images/vlad.png) no-repeat;
-    width: 163px;
-    height: 163px;
+#av_image {
+	background: white);
+    width: 100px;
+    height: 100px;
 	position: relative;
 	z-index: -1;
-	top: 5%;
-    left: 5%;
 }
-#circle {
-	background: url(../images/circle.png) no-repeat;
-	width: 183px;
-    height: 183px;
-	top: -4%;
-    left: -4%;
-}
-#glass {
-	background: url(../images/glass.png) no-repeat;
-	width: 170px;
-    height: 170px;
-}
+
 /* new ticket*/
 #new_report_form {
-	background: black;
 	text-align: center;
-	position: fixed;
+	position: absolute;
+	background: #00678e;
 	top: 25%;
-	border: solid 1px rgba(0, 170, 251, 0.59);
 	left: 25%;
+	border: solid 1px rgba(0, 170, 251, 0.59);
 	width: 768px;
 	height: 400px;
 	z-index: 0;
+	color: white;
 }
 
 #new_report {
-	top: 23px;
 	position: relative;
+	background: black;
 	width: 768px;
     height: 377px;
+	overflow-x: auto;
 }
 
 /* bugs_list */
 #bugs_list_form {
 	text-align: center;
-	background: black;
-	position: fixed;
-	top: 20%;
+	position: absolute;
+	background: #00678e;
+	top: 22%;
+	left: 22%;
 	border: solid 1px rgba(0, 170, 251, 0.59);
-	left: 20%;
 	width: 1000px;
 	height: 400px;
 	z-index: 0;
+	color: white;	
 }
 
 #bugs_list {
 	position: relative;
+	background: black;
 	width: 1000px;
     height: 377px;
-	overflow-x: overlay;
+	overflow-x: auto;
     overflow-y: inherit;
 }
 
@@ -159,16 +159,16 @@ body{
 	border: solid 1px cyan;
 	color: white;
 	cursor: pointer;
-    border-style: dotted;
+    border-style: outset;
 }
 
-
-/* Панель управления формой */
-.controlBar {
-	color: white;
-	position: relative;
-    height: 23px;
-    background-color: rgba(0, 170, 251, 0.59);
+.newreport:hover {
+	top: 0.5px;
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(9, 197, 204, 0.2));
+	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(9, 197, 204, 0.2));
+	background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(9, 197, 204, 0.2));
+	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(9, 197, 204, 0.2));
+	background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(9, 197, 204, 0.2));
 }
 
 .close {

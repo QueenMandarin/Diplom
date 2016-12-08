@@ -55,8 +55,13 @@ if(!defined('INCLUDE_CHECK')) die('У вас не прав запускать ф
 	}
 
 	function select_bugs_for_user() {
-		if($_SESSION['id']) {	
-			$sql = mysql_query("SELECT * FROM bugs WHERE sender = '".$_SESSION['name']."';");
+		if($_SESSION['id']) {
+			/* show admins all tickets */
+			if ($_SESSION['access_level'] > 0)
+				$sql = mysql_query("SELECT * FROM bugs;");
+			/* show user only own tickets */
+			else if ($_SESSION['access_level'] == 0)
+				$sql = mysql_query("SELECT * FROM bugs WHERE sender = '".$_SESSION['name']."';");
 
 			while($row = mysql_fetch_assoc($sql)) {
 				echo

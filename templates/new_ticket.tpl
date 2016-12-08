@@ -1,12 +1,11 @@
 ﻿<head>
 <script language="javascript" src="/css/js/jquery.js"></script>
 <script language="javaScript" src="/css/js/symbol.js"></script>
-	
 </head>	
 
 <div id="new_report">
 	<form action="" method="post">	
-		<table cellpadding="1" cellspacing="1" style="margin: 0px auto; color: white;">
+		<table cellpadding="1" cellspacing="1" style="margin: 0px auto; color: white; margin-top: 50px;">
 			<tbody>
 				<tr>
 					<td>Тема:</td>

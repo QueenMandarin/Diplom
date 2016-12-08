@@ -21,11 +21,12 @@
 			$_POST['username'] = mysql_real_escape_string($_POST['username']);
 			$_POST['password'] = mysql_real_escape_string($_POST['password']);	
 
-			$row = mysql_fetch_assoc(mysql_query("SELECT id, name FROM users WHERE login='{$_POST['username']}' AND password='".md5($_POST['password'])."'"));
+			$row = mysql_fetch_assoc(mysql_query("SELECT id, name, access_level FROM users WHERE login='{$_POST['username']}' AND password='".md5($_POST['password'])."'"));
 
 			if($row['id']) {
 				$_SESSION['id'] = $row['id'];
 				$_SESSION['name'] = $row['name'];
+				$_SESSION['access_level'] = $row['access_level'];
 				header("Location: index.php");
 			}
 			else
